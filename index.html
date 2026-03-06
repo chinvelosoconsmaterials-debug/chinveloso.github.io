@@ -1,796 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SHERRYL VELOSO-PEÑAFLOR | AI Operations & Automation Portfolio</title>
-  <style>
-   :root {
-  --bg: #f6efe6;
-  --bg-soft: #eadfce;
-  --card: #fffaf4;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SHERRYL VELOSO-PEÑAFLOR | AI Operations & Automation Portfolio</title>
 
-  --text: #2f2218;
-  --text-soft: #6a5545;
+<style>
 
-  --accent: #8a5a34;
-  --accent-dark: #5e3c24;
+:root{
+--bg:#f6efe6;
+--bg-soft:#eadfce;
+--card:#fffaf4;
 
-  --line: #d9c8b4;
+--text:#2f2218;
+--text-soft:#6a5545;
 
-  --shadow: 0 12px 32px rgba(70, 45, 28, 0.12);
-}
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+--accent:#8a5a34;
+--accent-dark:#5e3c24;
 
-    html {
-      scroll-behavior: smooth;
-    }
+--line:#d9c8b4;
 
-   body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: var(--bg);
-  color: var(--text);
-
-  background-image: radial-gradient(
-      rgba(120, 90, 60, 0.04) 1px,
-      transparent 1px
-  );
-  background-size: 22px 22px;
-}
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-     header {
-  background: linear-gradient(135deg, #e6d4bf, #cbb095);
-      color: var(--text);
-      padding: 88px 20px 72px;
-      text-align: center;
-      border-bottom: 1px solid var(--line);
-    }
-
-    header h1 {
-      font-size: 2.9rem;
-      margin-bottom: 12px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text);
-    }
-
-    header .subtitle {
-      font-size: 1.08rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-      color: var(--accent-dark);
-    }
-
-    header .intro {
-      max-width: 780px;
-      margin: 0 auto;
-      font-size: 1rem;
-      color: var(--text-soft);
-    }
-
-    .hero-buttons {
-      margin-top: 28px;
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-dark);
-      box-shadow: 0 6px 16px rgba(94,60,36,0.18);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--accent-dark);
-      border-color: var(--accent-dark);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(124, 82, 48, 0.08);
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-      justify-content: center;
-      .badge {
-  font-weight: 600;
-}
-    }
-
-    .badge {
-      background: rgba(255, 253, 249, 0.9);
-      border: 1px solid var(--line);
-      color: var(--accent-dark);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 0.92rem;
-    }
-
-    nav {
-      background: rgba(255, 253, 249, 0.95);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(8px);
-    }
-
-    nav .container {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      padding: 14px 20px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-soft);
-      font-size: 0.95rem;
-      font-weight: 700;
-    }
-
-    nav a:hover {
-      color: var(--accent-dark);
-    }
-
-    section {
-  padding: 74px 0;
-  position: relative;
-}
-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 60px;
-  height: 2px;
-  background: var(--line);
-  transform: translateX(-50%);
-  opacity: 0.4;
-}
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      color: var(--text);
-    }
-
-    .section-intro {
-      max-width: 760px;
-      margin-bottom: 28px;
-      color: var(--text-soft);
-    }
-
-    .card,
-    .highlight-box,
-    .about-panel {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-    }
-
-    .card,
-    .highlight-box {
-      padding: 24px;
-    }
-
-    .highlight-box {
-      background: #fcf7f1;
-    }
-
-    .grid-2,
-    .grid-3,
-    .grid-4 {
-      display: grid;
-      gap: 20px;
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .grid-4 {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .value-card h3,
-    .tool-card h3,
-    .project-card h3,
-    .proof-card h3,
-    .support-card h3 {
-      margin-bottom: 10px;
-      color: var(--text);
-      font-size: 1.08rem;
-    }
-
-    .card p,
-    .highlight-box p {
-      color: var(--text-soft);
-    }
-.card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+--shadow:0 12px 32px rgba(70,45,28,0.12);
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(70,45,28,0.14);
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
-    .about-panel {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 28px;
-      padding: 26px;
-      align-items: center;
-      background: linear-gradient(180deg, #fffdf9, #f9f2ea);
-    }
 
-    .about-photo {
-      width: 100%;
-      max-width: 240px;
-      aspect-ratio: 1 / 1;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      background: #eadccc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-dark);
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-align: center;
-      padding: 12px;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    .about-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+body{
+font-family:Arial, sans-serif;
+line-height:1.6;
+background:var(--bg);
+color:var(--text);
 
-    .about-copy h3 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-      color: var(--text);
-    }
+background-image:radial-gradient(
+rgba(120,90,60,0.04) 1px,
+transparent 1px
+);
+background-size:22px 22px;
+}
 
-    .about-copy p {
-      color: var(--text-soft);
-      margin-bottom: 12px;
-    }
+img{
+max-width:100%;
+display:block;
+}
 
-    .accent {
-      color: var(--accent-dark);
-      font-weight: 700;
-    }
+.container{
+width:100%;
+max-width:1100px;
+margin:0 auto;
+padding:0 20px;
+}
 
-    .project-meta {
-      margin-top: 14px;
-      display: grid;
-      gap: 10px;
-    }
+header{
+background:linear-gradient(135deg,#e6d4bf,#cbb095);
+padding:88px 20px 72px;
+text-align:center;
+border-bottom:1px solid var(--line);
+}
 
-    .project-meta div {
-      font-size: 0.96rem;
-      color: var(--text-soft);
-    }
+header h1{
+font-size:2.9rem;
+margin-bottom:12px;
+font-weight:700;
+letter-spacing:-0.02em;
+}
 
-    .label {
-      font-weight: 700;
-      color: var(--text);
-    }
+header .subtitle{
+font-size:1.08rem;
+font-weight:700;
+margin-bottom:14px;
+color:var(--accent-dark);
+}
 
-    .workflow {
-      margin-top: 16px;
-      background: #f7efe6;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      white-space: pre-line;
-      color: var(--text-soft);
-      font-size: 0.95rem;
-    }
+header .intro{
+max-width:780px;
+margin:0 auto;
+font-size:1rem;
+color:var(--text-soft);
+}
 
-    .support-grid .card,
-    .proof-grid .card {
-      height: 100%;
-    }
+.hero-buttons{
+margin-top:28px;
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap;
+}
 
-    ul.clean-list {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 12px;
-    }
+.btn{
+display:inline-block;
+padding:12px 18px;
+border-radius:999px;
+text-decoration:none;
+font-weight:700;
+transition:0.2s ease;
+border:1px solid transparent;
+}
 
-    ul.clean-list li {
-      margin-bottom: 10px;
-      color: var(--text-soft);
-      padding-left: 18px;
-      position: relative;
-    }
+.btn-primary{
+background:var(--accent);
+color:#fff;
+}
 
-    ul.clean-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: bold;
-    }
+.btn-primary:hover{
+background:var(--accent-dark);
+box-shadow:0 6px 16px rgba(94,60,36,0.18);
+}
 
-    .mini-note {
-      margin-top: 14px;
-      font-size: 0.94rem;
-      color: var(--text-soft);
-    }
+.btn-secondary{
+background:transparent;
+color:var(--accent-dark);
+border-color:var(--accent-dark);
+}
 
-    .contact-box p {
-      margin-bottom: 8px;
-    }
+.btn-secondary:hover{
+background:rgba(124,82,48,0.08);
+}
 
-    footer {
-      padding: 34px 20px 52px;
-      text-align: center;
-      color: var(--text-soft);
-      font-size: 0.92rem;
-      border-top: 1px solid var(--line);
-    }
+.badge-row{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:24px;
+justify-content:center;
+}
 
-    @media (max-width: 800px) {
-      .about-panel {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+.badge{
+background:rgba(255,253,249,0.9);
+border:1px solid var(--line);
+color:var(--accent-dark);
+padding:8px 12px;
+border-radius:999px;
+font-size:0.92rem;
+font-weight:600;
+}
 
-      .about-photo {
-        margin: 0 auto;
-      }
-    }
+nav{
+background:rgba(255,253,249,0.95);
+border-bottom:1px solid var(--line);
+position:sticky;
+top:0;
+z-index:100;
+backdrop-filter:blur(8px);
+}
 
-    @media (max-width: 640px) {
-      header {
-        padding: 66px 20px 56px;
-      }
+nav .container{
+display:flex;
+justify-content:center;
+gap:22px;
+padding:14px 20px;
+flex-wrap:wrap;
+}
 
-      header h1 {
-        font-size: 2.15rem;
-      }
+nav a{
+text-decoration:none;
+color:var(--text-soft);
+font-size:0.95rem;
+font-weight:700;
+}
 
-      h2 {
-        font-size: 1.62rem;
-      }
+nav a:hover{
+color:var(--accent-dark);
+}
 
-      nav .container {
-        gap: 14px;
-      }
-    }
-  </style>
+section{
+padding:74px 0;
+position:relative;
+}
+
+section::after{
+content:"";
+position:absolute;
+bottom:0;
+left:50%;
+width:60px;
+height:2px;
+background:var(--line);
+transform:translateX(-50%);
+opacity:0.4;
+}
+
+h2{
+font-size:2rem;
+margin-bottom:16px;
+}
+
+.section-intro{
+max-width:760px;
+margin-bottom:28px;
+color:var(--text-soft);
+}
+
+.card,.highlight-box,.about-panel{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:22px;
+box-shadow:var(--shadow);
+}
+
+.card,.highlight-box{
+padding:24px;
+}
+
+.highlight-box{
+background:#fcf7f1;
+}
+
+.grid-2,.grid-3,.grid-4{
+display:grid;
+gap:20px;
+}
+
+.grid-2{
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+}
+
+.grid-3{
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+.grid-4{
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.card p{
+color:var(--text-soft);
+}
+
+.card{
+transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 18px 40px rgba(70,45,28,0.14);
+}
+
+.about-panel{
+display:grid;
+grid-template-columns:260px 1fr;
+gap:28px;
+padding:26px;
+align-items:center;
+background:linear-gradient(180deg,#fffdf9,#f9f2ea);
+}
+
+.about-photo{
+width:100%;
+max-width:240px;
+aspect-ratio:1/1;
+border-radius:22px;
+overflow:hidden;
+border:1px solid var(--line);
+background:#eadccc;
+}
+
+.about-photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.about-copy h3{
+font-size:1.25rem;
+margin-bottom:12px;
+}
+
+.about-copy p{
+color:var(--text-soft);
+margin-bottom:12px;
+}
+
+.accent{
+color:var(--accent-dark);
+font-weight:700;
+}
+
+.workflow{
+margin-top:16px;
+background:#f7efe6;
+border:1px solid var(--line);
+border-radius:16px;
+padding:16px;
+white-space:pre-line;
+color:var(--text-soft);
+font-size:0.95rem;
+}
+
+ul.clean-list{
+list-style:none;
+margin-top:12px;
+}
+
+ul.clean-list li{
+margin-bottom:10px;
+color:var(--text-soft);
+padding-left:18px;
+position:relative;
+}
+
+ul.clean-list li::before{
+content:"•";
+position:absolute;
+left:0;
+color:var(--accent);
+font-weight:bold;
+}
+
+footer{
+padding:34px 20px 52px;
+text-align:center;
+color:var(--text-soft);
+font-size:0.92rem;
+border-top:1px solid var(--line);
+}
+
+@media(max-width:800px){
+.about-panel{
+grid-template-columns:1fr;
+text-align:center;
+}
+.about-photo{
+margin:0 auto;
+}
+}
+
+</style>
 </head>
+
 <body>
 
-  <header>
-    <div class="container">
-      <h1>Chin Veloso</h1>
-      <p class="subtitle">AI Operations, Workflow & Automation Support</p>
-      <p class="intro">
-        I help fast-moving founders organize operations, reduce overload, and execute ideas faster using systems, workflow design, AI-assisted productivity, and practical automation thinking.
-      </p>
+<header>
+<div class="container">
 
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="#systems">View Systems</a>
-        <a class="btn btn-secondary" href="mailto:smallsteps@tinyteamstudio.online">Email Me</a>
-      </div>
+<h1>Chin Veloso</h1>
+<p class="subtitle">AI Operations, Workflow & Automation Support</p>
 
-      <div class="badge-row">
-        <span class="badge">Google Sheets</span>
-        <span class="badge">Apps Script</span>
-        <span class="badge">GitHub</span>
-        <span class="badge">GitLab</span>
-        <span class="badge">Python</span>
-        <span class="badge">VS Code</span>
-        <span class="badge">AI-Assisted Workflows</span>
-      </div>
-    </div>
-  </header>
+<p class="intro">
+I help fast-moving founders organize operations, reduce overload, and execute ideas faster using systems, workflow design, AI-assisted productivity, and practical automation thinking.
+</p>
 
-  <nav>
-    <div class="container">
-      <a href="#about">About</a>
-      <a href="#help">What I Help With</a>
-      <a href="#support">How I Can Help</a>
-      <a href="#systems">Selected Systems</a>
-      <a href="#proof">Proof of Work</a>
-      <a href="#approach">Approach</a>
-      <a href="#tools">Tools</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<div class="hero-buttons">
+<a class="btn btn-primary" href="#systems">View Systems</a>
+<a class="btn btn-secondary" href="mailto:smallsteps@tinyteamstudio.online">Email Me</a>
+</div>
 
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p class="section-intro">
-        I build practical systems for operations, follow-up, tracking, approvals, execution support, and workflow organization. My focus is turning messy work into clear, repeatable processes that are easier to manage and improve.
-      </p>
+<div class="badge-row">
+<span class="badge">Google Sheets</span>
+<span class="badge">Apps Script</span>
+<span class="badge">GitHub</span>
+<span class="badge">GitLab</span>
+<span class="badge">Python</span>
+<span class="badge">VS Code</span>
+<span class="badge">AI-Assisted Workflows</span>
+</div>
 
-      <div class="about-panel">
-        <div class="about-photo">
-          <!-- Replace the text below with your actual image -->
-          <!-- Example:
-          <img src="assets/images/profile-sherryl.jpg" alt="Chin Veloso" />
-          -->
-          Add Your Photo Here
-        </div>
+</div>
+</header>
 
-        <div class="about-copy">
-          <h3>Warm, reliable, and systems-minded support</h3>
-          <p>
-            I am especially interested in helping startups that move quickly but need <span class="accent">more structure, cleaner handoffs, stronger follow-through, and faster execution</span>.
-          </p>
-          <p>
-            I work best where operations need organizing, repetitive tasks need simplifying, and ideas need a clearer path from concept to action.
-          </p>
-          <p>
-            I can also support practical digital work such as website structure, content organization, lightweight automation, and build support using Google tools, GitHub, Python, and VS Code.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<nav>
+<div class="container">
+<a href="#about">About</a>
+<a href="#help">What I Help With</a>
+<a href="#support">How I Can Help</a>
+<a href="#systems">Selected Systems</a>
+<a href="#proof">Proof of Work</a>
+<a href="#approach">Approach</a>
+<a href="#tools">Tools</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-  <section id="help">
-    <div class="container">
-      <h2>What I Help With</h2>
-      <p class="section-intro">
-        I fit best in roles that combine executive support, operations coordination, and workflow improvement.
-      </p>
+<section id="about">
+<div class="container">
 
-      <div class="grid-3">
-        <div class="card value-card">
-          <h3>Organized Operations</h3>
-          <p>Turn scattered moving parts into clearer systems, task flows, status visibility, and documented processes.</p>
-        </div>
+<h2>About Me</h2>
 
-        <div class="card value-card">
-          <h3>AI-Driven Productivity</h3>
-          <p>Use AI to support drafting, structuring, summarizing, and speeding up repetitive work across daily operations.</p>
-        </div>
+<p class="section-intro">
+I build practical systems for operations, follow-up, tracking, approvals, execution support, and workflow organization. My focus is turning messy work into clear, repeatable processes that are easier to manage and improve.
+</p>
 
-        <div class="card value-card">
-          <h3>Faster Execution</h3>
-          <p>Help founders move ideas into action through workflow mapping, prioritization, and operational follow-through.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="about-panel">
 
-  <section id="support">
-    <div class="container">
-      <h2>How I Can Help Your Team</h2>
-      <p class="section-intro">
-        Beyond workflow support, I can also help with practical digital building tasks that growing startups often need.
-      </p>
+<div class="about-photo">
+<img src="assets/images/profile/profile-chin-veloso.png" alt="Chin Veloso">
+</div>
 
-      <div class="grid-4 support-grid">
-        <div class="card support-card">
-          <h3>Operations Setup</h3>
-          <p>Organize intake flows, approvals, records, trackers, follow-ups, and internal process visibility.</p>
-        </div>
+<div class="about-copy">
 
-        <div class="card support-card">
-          <h3>Website Support</h3>
-          <p>Build or improve simple websites, landing pages, portfolio pages, and structured web content for clearer presentation.</p>
-        </div>
+<h3>Warm, reliable, and systems-minded support</h3>
 
-        <div class="card support-card">
-          <h3>Workflow Automation</h3>
-          <p>Create automation-ready flows using Google tools, Apps Script, AI support, and organized process logic.</p>
-        </div>
+<p>
+I am especially interested in helping startups that move quickly but need <span class="accent">more structure, cleaner handoffs, stronger follow-through, and faster execution</span>.
+</p>
 
-        <div class="card support-card">
-          <h3>Lightweight Tool Building</h3>
-          <p>Use Python and VS Code to create simple scripts, workflow utilities, and internal tools when custom logic is needed.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<p>
+I work best where operations need organizing, repetitive tasks need simplifying, and ideas need a clearer path from concept to action.
+</p>
 
-  <section id="systems">
-    <div class="container">
-      <h2>Selected Systems</h2>
-      <p class="section-intro">
-        These examples reflect the kind of systems thinking I bring to operational support, automation, and structured execution.
-      </p>
+<p>
+I can also support practical digital work such as website structure, content organization, lightweight automation, and build support using Google tools, GitHub, Python, and VS Code.
+</p>
 
-      <div class="grid-2">
-        <div class="card project-card">
-          <h3>Operations Tracking System</h3>
-          <p>Designed structured Google-based workflows for intake, review, approvals, and status visibility.</p>
+</div>
+</div>
+</div>
+</section>
 
-          <div class="project-meta">
-            <div><span class="label">Problem:</span> scattered submissions and unclear next steps</div>
-            <div><span class="label">Solution:</span> organized sheet-based flow with validation and progress tracking</div>
-            <div><span class="label">Outcome:</span> clearer records, easier follow-up, less manual confusion</div>
-          </div>
-
-          <div class="workflow">Input Received
-↓
-Logged in Organized Sheet
-↓
-Validation / Review
-↓
-Approval or Next Action
-↓
-Status Updated</div>
-        </div>
-
-        <div class="card project-card">
-          <h3>Follow-Up & Communication Workflow</h3>
-          <p>Mapped automation logic for confirmations, follow-ups, and sequence-based communication steps.</p>
-
-          <div class="project-meta">
-            <div><span class="label">Problem:</span> manual follow-up slows response time</div>
-            <div><span class="label">Solution:</span> trigger-based communication flow with status updates</div>
-            <div><span class="label">Outcome:</span> more consistent communication and less repetitive work</div>
-          </div>
-
-          <div class="workflow">User Action
-↓
-Trigger Detected
-↓
-Message or Follow-Up Prepared
-↓
-Status Updated
-↓
-Next Step Scheduled</div>
-        </div>
-
-        <div class="card project-card">
-          <h3>Execution Support Workflow</h3>
-          <p>Created systems that help move ideas from concept into trackable operational steps.</p>
-
-          <div class="project-meta">
-            <div><span class="label">Problem:</span> ideas stall when execution is not structured</div>
-            <div><span class="label">Solution:</span> workflow breakdown from idea to action steps</div>
-            <div><span class="label">Outcome:</span> better visibility, clearer priorities, faster movement</div>
-          </div>
-
-          <div class="workflow">Founder Idea
-↓
-Task Breakdown
-↓
-Workflow Mapping
-↓
-Execution Steps
-↓
-Progress Tracking</div>
-        </div>
-
-        <div class="card project-card">
-          <h3>Website & Content Build Support</h3>
-          <p>Build simple web pages and content structures that help teams present services, offers, or workflows more clearly.</p>
-
-          <div class="project-meta">
-            <div><span class="label">Problem:</span> ideas and offers are hard to present clearly online</div>
-            <div><span class="label">Solution:</span> create structured pages, cleaner sections, and action-focused content flow</div>
-            <div><span class="label">Outcome:</span> clearer messaging, better presentation, faster page deployment</div>
-          </div>
-
-          <div class="workflow">Goal or Offer
-↓
-Page Structure Planned
-↓
-Content Organized
-↓
-Website Section Built
-↓
-Improved Presentation</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proof">
-    <div class="container">
-      <h2>Proof of Work</h2>
-      <p class="section-intro">
-        I do not just describe workflows. I actively build and structure them using practical tools and real project systems.
-      </p>
-
-      <div class="grid-3 proof-grid">
-        <div class="card proof-card">
-          <h3>Google-Based Workflow Systems</h3>
-          <p>Worked on Google Sheets and Apps Script flows for intake, approvals, follow-ups, records, and process organization.</p>
-        </div>
-
-        <div class="card proof-card">
-          <h3>AI-Supported Execution</h3>
-          <p>Use AI to speed up drafting, structuring, analysis, planning, and content support for operational tasks and build work.</p>
-        </div>
-
-        <div class="card proof-card">
-          <h3>Python & VS Code Build Work</h3>
-          <p>Use Python and VS Code for coding tasks, lightweight automation scripts, workflow utilities, and custom support tools as needed.</p>
-        </div>
-      </div>
-
-      <p class="mini-note">
-        I work best in practical environments where speed matters, systems need strengthening, and a founder needs reliable support across operations, automation, and digital build tasks.
-      </p>
-    </div>
-  </section>
-
-  <section id="approach">
-    <div class="container">
-      <h2>How I Solve Operational Overload</h2>
-      <p class="section-intro">
-        My approach is simple: organize first, simplify next, then support speed with repeatable systems and AI where useful.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="margin-bottom: 10px;">My Working Approach</h3>
-          <ul class="clean-list">
-            <li>capture incoming work clearly</li>
-            <li>break tasks into manageable steps</li>
-            <li>reduce unnecessary manual repetition</li>
-            <li>improve handoffs and status visibility</li>
-            <li>support execution with structure and follow-through</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-bottom: 10px;">Example Startup Flow</h3>
-          <div class="workflow">Idea comes in
-↓
-Captured in organized system
-↓
-Broken into action steps
-↓
-Priority assigned
-↓
-AI helps draft, summarize, or structure work
-↓
-Execution moves faster</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="tools">
-    <div class="container">
-      <h2>Tools & Approach</h2>
-      <p class="section-intro">
-        I work with practical, low-cost tools that support operations, workflow clarity, website building, automation, and AI-assisted productivity.
-      </p>
-
-      <div class="grid-3">
-        <div class="card tool-card">
-          <h3>Google Tools</h3>
-          <ul class="clean-list">
-            <li>Google Sheets</li>
-            <li>Google Docs</li>
-            <li>Google Forms</li>
-            <li>Google Drive organization</li>
-          </ul>
-        </div>
-
-        <div class="card tool-card">
-          <h3>Automation & Workflow</h3>
-          <ul class="clean-list">
-            <li>Google Apps Script</li>
-            <li>workflow design</li>
-            <li>task structuring</li>
-            <li>process mapping</li>
-          </ul>
-        </div>
-
-        <div class="card tool-card">
-          <h3>AI Productivity</h3>
-          <ul class="clean-list">
-            <li>ChatGPT for drafting and analysis</li>
-            <li>AI-assisted planning</li>
-            <li>prompt-based productivity support</li>
-            <li>structured execution support</li>
-          </ul>
-        </div>
-
-        <div class="card tool-card">
-          <h3>Python & Coding Tools</h3>
-          <ul class="clean-list">
-            <li>Python scripting for automation</li>
-            <li>Visual Studio Code development</li>
-            <li>workflow utilities and small automation tools</li>
-            <li>AI-assisted coding and rapid prototyping</li>
-          </ul>
-        </div>
-
-        <div class="card tool-card">
-          <h3>Website & Page Building</h3>
-          <ul class="clean-list">
-            <li>simple website structure</li>
-            <li>landing page content organization</li>
-            <li>HTML and CSS editing</li>
-            <li>clear page flow and section design</li>
-          </ul>
-        </div>
-
-        <div class="card tool-card">
-          <h3>Build Style</h3>
-          <ul class="clean-list">
-            <li>GitHub</li>
-            <li>GitLab</li>
-            <li>AI-assisted development</li>
-            <li>system-first thinking</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p class="section-intro">
-        I am currently seeking a role where I can support a founder or team through organized operations, workflow improvement, website support, and AI-assisted execution.
-      </p>
-
-      <div class="card contact-box">
-        <p><strong>Name:</strong> Chin Veloso</p>
-        <p><strong>Email:</strong> smallsteps@tinyteamstudio.online</p>
-        <p><strong>Location:</strong> Philippines / Remote</p>
-        <p><strong>Focus:</strong> Executive support, operations systems, workflow design, website support, automation-minded execution</p>
-        <div style="margin-top: 18px;">
-          <a class="btn btn-primary" href="mailto:smallsteps@tinyteamstudio.online">Email Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Chin Veloso | AI Operations & Automation Portfolio
-  </footer>
+<footer>
+© 2026 Chin Veloso | AI Operations & Automation Portfolio
+</footer>
 
 </body>
 </html>
