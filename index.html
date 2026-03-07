@@ -9,452 +9,642 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"/>
 
 <style>
-
 :root{
---bg:#f6efe6;
---card:#fffaf4;
---hero:#3b2416;
---text:#2f2218;
---text-soft:#6a5545;
---line:#d9c8b4;
---accent-light:#f3e4d7;
---accent-light-2:#ead7c7;
---shadow:0 10px 28px rgba(70,45,28,0.10);
+  --bg:#f6efe6;
+  --card:#fffaf4;
+  --hero:#3b2416;
+  --text:#2f2218;
+  --text-soft:#6a5545;
+  --line:#d9c8b4;
+  --accent-light:#f3e4d7;
+  --accent-light-2:#ead7c7;
+  --shadow:0 10px 28px rgba(70,45,28,0.10);
 }
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.6;
-background-image:radial-gradient(rgba(120,90,60,0.04)1px,transparent 1px);
-background-size:22px 22px;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  background-image:radial-gradient(rgba(120,90,60,0.04) 1px, transparent 1px);
+  background-size:22px 22px;
 }
 
 img{
-max-width:100%;
-display:block;
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
 }
 
 .container{
-width:100%;
-max-width:1100px;
-margin:0 auto;
-padding:0 20px;
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
 }
 
 section{
-padding:72px 0;
+  padding:72px 0;
 }
 
 h1,h2,h3{
-color:var(--text);
+  color:var(--text);
 }
 
 h2{
-font-size:2rem;
-margin-bottom:14px;
+  font-size:2rem;
+  margin-bottom:14px;
+}
+
+h3{
+  margin-bottom:10px;
 }
 
 .section-intro{
-max-width:760px;
-color:var(--text-soft);
-margin-bottom:28px;
+  max-width:760px;
+  color:var(--text-soft);
+  margin-bottom:28px;
 }
 
 .card{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:18px;
-box-shadow:var(--shadow);
-padding:24px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  padding:24px;
 }
 
 .card p{
-color:var(--text-soft);
+  color:var(--text-soft);
 }
 
-.grid-2 {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-gap: 24px;
-}
-
-/* TOOLS GRID (3 columns) */
-.grid-3 {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 24px;
-margin-top: 24px;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 900px) {
-
-.grid-3 {
-grid-template-columns: 1fr;
-}
-
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;
 }
 
 .grid-3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-margin-top:24px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  margin-top:24px;
 }
 
 .btn{
-display:inline-block;
-padding:12px 18px;
-border-radius:999px;
-text-decoration:none;
-font-weight:700;
-border:1px solid #e2d2c3;
-box-shadow:0 4px 12px rgba(0,0,0,0.15);
-transition:0.2s ease;
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  border:1px solid #e2d2c3;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  transition:0.2s ease;
 }
 
 .btn-primary{
-background:var(--accent-light);
-color:var(--hero);
+  background:var(--accent-light);
+  color:var(--hero);
 }
 
 .btn-primary:hover{
-background:var(--accent-light-2);
+  background:var(--accent-light-2);
 }
 
 .btn-secondary{
-background:#ffffff;
-color:var(--hero);
+  background:#ffffff;
+  color:var(--hero);
 }
 
 .btn-secondary:hover{
-background:var(--accent-light);
+  background:var(--accent-light);
 }
 
 .workflow{
-margin-top:14px;
-background:#f3e8dd;
-padding:14px;
-border-radius:12px;
-border:1px solid var(--line);
-white-space:pre-line;
-font-size:.95rem;
-color:var(--text-soft);
+  margin-top:14px;
+  background:#f3e8dd;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  white-space:pre-line;
+  font-size:.95rem;
+  color:var(--text-soft);
 }
 
+.project-actions{
+  margin-top:16px;
+}
+
+.project-actions .btn{
+  box-shadow:none;
+}
+
+/* HERO */
 header{
-background:var(--hero);
-color:white;
-text-align:center;
-padding:96px 20px 80px;
+  background:var(--hero);
+  color:white;
+  text-align:center;
+  padding:96px 20px 80px;
 }
 
 .hero-name{
-font-family:"Great Vibes",cursive;
-font-size:3.6rem;
-color:white;
-margin-bottom:10px;
+  font-family:"Great Vibes", cursive;
+  font-size:3.6rem;
+  color:white;
+  margin-bottom:10px;
 }
 
 .subtitle{
-color:#ead7c7;
-font-weight:700;
-margin-bottom:12px;
+  color:#ead7c7;
+  font-weight:700;
+  margin-bottom:12px;
 }
 
 .intro{
-max-width:760px;
-margin:0 auto;
-color:#f2e8df;
+  max-width:760px;
+  margin:0 auto;
+  color:#f2e8df;
 }
 
 .hero-buttons{
-margin-top:28px;
-display:flex;
-justify-content:center;
-gap:12px;
-flex-wrap:wrap;
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
+/* NAV */
 nav{
-background:rgba(255,250,244,0.96);
-border-bottom:1px solid var(--line);
-position:sticky;
-top:0;
-z-index:100;
+  background:rgba(255,250,244,0.96);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
 nav .container{
-display:flex;
-justify-content:center;
-gap:22px;
-flex-wrap:wrap;
-padding:14px 20px;
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  flex-wrap:wrap;
+  padding:14px 20px;
 }
 
 nav a{
-text-decoration:none;
-font-weight:700;
-color:var(--text-soft);
+  text-decoration:none;
+  font-weight:700;
+  color:var(--text-soft);
 }
 
 nav a:hover{
-color:var(--hero);
+  color:var(--hero);
 }
 
+/* ABOUT */
 .about-wrap{
-display:grid;
-grid-template-columns:260px 1fr;
-gap:28px;
-align-items:center;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:28px;
+  align-items:center;
 }
 
 .about-photo{
-border-radius:18px;
-overflow:hidden;
-border:1px solid var(--line);
-box-shadow:var(--shadow);
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
 }
 
 .about-photo img{
-width:100%;
-aspect-ratio:1/1;
-object-fit:cover;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
 }
 
 footer{
-text-align:center;
-padding:36px 20px 48px;
-border-top:1px solid var(--line);
-color:var(--text-soft);
+  text-align:center;
+  padding:36px 20px 48px;
+  border-top:1px solid var(--line);
+  color:var(--text-soft);
 }
 
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .grid-3{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 800px){
+  .about-wrap{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .about-photo{
+    max-width:260px;
+    margin:0 auto;
+  }
+}
+
+@media (max-width: 640px){
+  header{
+    padding:72px 20px 62px;
+  }
+
+  .hero-name{
+    font-size:2.5rem;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="container">
+  <div class="container">
 
-<h1 class="hero-name">Sherryl Veloso-Peñaflor</h1>
+    <h1 class="hero-name">Sherryl Veloso-Peñaflor</h1>
 
-<p class="subtitle">
-AI Operations • Workflow Systems • Automation Support
-</p>
+    <p class="subtitle">
+      AI Operations • Workflow Systems • Automation Support
+    </p>
 
-<p class="intro">
-I build structured digital systems that help founders organize operations and execute ideas more clearly.
-</p>
+    <p class="intro">
+      I build structured digital systems that help founders organize operations and execute ideas more clearly.
+    </p>
 
-<div class="hero-buttons">
+    <div class="hero-buttons">
+      <a href="#about" class="btn btn-primary">About Me</a>
 
-<a href="#about" class="btn btn-primary">About Me</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=smallsteps@tinyteamstudio.online&su=Portfolio%20Inquiry"
+         target="_blank"
+         class="btn btn-secondary">
+        Primary Email
+      </a>
 
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=smallsteps@tinyteamstudio.online&su=Portfolio%20Inquiry"
-target="_blank"
-class="btn btn-secondary">
-Primary Email
-</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chinveloso.consmaterials@gmail.com&su=Portfolio%20Inquiry"
+         target="_blank"
+         class="btn btn-secondary">
+        Alternative Email
+      </a>
+    </div>
 
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=chinveloso.consmaterials@gmail.com&su=Portfolio%20Inquiry"
-target="_blank"
-class="btn btn-secondary">
-Alternative Email
-</a>
-
-</div>
-</div>
+  </div>
 </header>
 
-
 <nav>
-<div class="container">
-<a href="#about">About</a>
-<a href="#systems">Systems</a>
-<a href="#help">How I Can Help</a>
-<a href="#tools">Tools</a>
-<a href="#contact">Contact</a>
-</div>
+  <div class="container">
+    <a href="#about">About</a>
+    <a href="#systems">Systems</a>
+    <a href="#help">How I Can Help</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-
 <section id="about">
-<div class="container">
+  <div class="container">
 
-<h2>About Me</h2>
+    <h2>About Me</h2>
 
-<p class="section-intro">
-I build structured digital systems that support operations, workflow clarity, and faster execution.
-</p>
+    <p class="section-intro">
+      I build structured digital systems that support operations, workflow clarity, and faster execution.
+    </p>
 
-<div class="about-wrap">
+    <div class="about-wrap">
 
-<div class="about-photo">
-<img src="assets/images/projects/chin-veloso-about.png">
-</div>
+      <div class="about-photo">
+        <img src="assets/images/projects/chin-veloso-about.png" alt="Sherryl Veloso-Peñaflor">
+      </div>
 
-<div>
+      <div>
+        <h3>Operations-focused and workflow-minded</h3>
 
-<h3>Operations-focused and workflow-minded</h3>
+        <p>
+          My work focuses on organizing information and structuring digital processes so work becomes easier to manage and execute.
+        </p>
 
-<p>
-My work focuses on organizing information and structuring digital processes so work becomes easier to manage and execute.
-</p>
+        <p>
+          I help shape the digital system behind the work — not just the page that people see.
+        </p>
+      </div>
 
-<p>
-I help shape the digital system behind the work — not just the page that people see.
-</p>
-
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 </section>
 
+<section id="systems">
+  <div class="container">
+
+    <h2>Selected Systems</h2>
+
+    <p class="section-intro">
+      These are selected examples of websites and workflows I built to help organize digital work more clearly.
+    </p>
+
+    <div class="grid-2">
+
+      <div class="card">
+        <h3>LV Beach Camp — Booking System</h3>
+        <p>Guest booking information organized into one clear system.</p>
+        <div class="workflow">Visitor lands on website
+↓
+Views stay options
+↓
+Checks rates and FAQ
+↓
+Sends booking inquiry
+↓
+Reservation confirmed</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows operations organization and clear information flow.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/lv-beach-camp-website-1.png" target="_blank" class="btn btn-primary">View Booking Sample</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>LV Beach Camp — Guest Service Structure</h3>
+        <p>Stay options, packages, and payment methods structured for faster booking decisions.</p>
+        <div class="workflow">Visitor enters site
+↓
+Explores stay packages
+↓
+Reviews pricing
+↓
+Uses contact or booking
+↓
+Inquiry handled</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows service workflow design and execution support.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/lv-beach-camp-website-2.png" target="_blank" class="btn btn-primary">View Service Sample</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>TinyTeam — Client Intake System</h3>
+        <p>Digital library service structured with packages, explanation, and entry points.</p>
+        <div class="workflow">Visitor explores service
+↓
+Reviews packages
+↓
+Reads FAQ
+↓
+Submits request
+↓
+Client workflow begins</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows system thinking and structured service flow.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/tinyteam-digital-library.png" target="_blank" class="btn btn-primary">View Client Intake Sample</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Tides of Hope — Engagement System</h3>
+        <p>Nonprofit website guiding visitors to volunteer, partner, or donate.</p>
+        <div class="workflow">Visitor learns mission
+↓
+Explores engagement options
+↓
+Chooses action
+↓
+Submits interest
+↓
+Organization follows up</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows operational structure and engagement workflows.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/tides-of-hope-website.png" target="_blank" class="btn btn-primary">View Engagement Sample</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>BuildMaster — Content Workflow System</h3>
+        <p>Construction content engine organizing research, scripts, and funnel content.</p>
+        <div class="workflow">Expert knowledge identified
+↓
+Content planning
+↓
+Scripts created
+↓
+Content published
+↓
+Leads generated</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows workflow planning and execution systems.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/buildmaster-content-system.png" target="_blank" class="btn btn-primary">View Content Workflow</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Verdant Elegance — Client Journey System</h3>
+        <p>Landscaping services structured from inspiration to consultation request.</p>
+        <div class="workflow">Visitor discovers inspiration
+↓
+Explores services
+↓
+Reviews process
+↓
+Submits consultation
+↓
+Project planning begins</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows structured service journey and client onboarding.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/verdant-elegance-landscaping.png" target="_blank" class="btn btn-primary">View Client Journey</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Place N Replace — E-Commerce Parts System</h3>
+        <p>Spare-parts ordering workflow for contractors and workshops.</p>
+        <div class="workflow">User searches part
+↓
+Catalog filters match item
+↓
+User places order
+↓
+Warehouse receives order
+↓
+Parts dispatched</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows operational workflow optimization.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/place-n-replace-store.png" target="_blank" class="btn btn-primary">View E-Commerce Sample</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Silverline — Contractor Quote System</h3>
+        <p>Glass and aluminum service platform with structured project request intake.</p>
+        <div class="workflow">Contractor visits website
+↓
+Reviews services
+↓
+Submits project request
+↓
+Business prepares quote
+↓
+Project discussion begins</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows service intake and operational structure.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/silverline-glass-aluminum.png" target="_blank" class="btn btn-primary">View Quote Request Sample</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>HandyPro Fix & Repair — Service Booking Funnel</h3>
+        <p>Home service booking funnel that turns repair requests into structured service jobs.</p>
+        <div class="workflow">Homeowner visits website
+↓
+Selects repair service
+↓
+Submits request form
+↓
+Technician receives job
+↓
+Service scheduled and completed</div>
+        <p style="margin-top:14px;"><strong>Role Fit:</strong> Shows service workflow design and operational job intake.</p>
+        <div class="project-actions">
+          <a href="assets/images/projects/handypro-fix-repair-funnel.png" target="_blank" class="btn btn-primary">View Service Funnel</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:30px; color:var(--text-soft);">
+      These are only a few examples of digital systems I have built across different industries.
+    </p>
+
+  </div>
+</section>
 
 <section id="help">
+  <div class="container">
 
-<div class="container">
+    <h2>How I Can Help</h2>
 
-<h2>How I Can Help</h2>
+    <p class="section-intro">
+      I focus on bringing structure and clarity to digital work so founders and teams can move faster.
+    </p>
 
-<p class="section-intro">
-I focus on bringing structure and clarity to digital work so founders and teams can move faster.
-</p>
+    <div class="grid-2">
 
-<div class="grid-2">
+      <div class="card">
+        <h3>Organizing Digital Work</h3>
+        <p>Structure information, files, and workflows so teams know where things live.</p>
+      </div>
 
-<div class="card">
-<h3>Organizing Digital Work</h3>
-<p>Structure information, files, and workflows so teams know where things live.</p>
-</div>
+      <div class="card">
+        <h3>Workflow Clarity</h3>
+        <p>Map simple step-by-step processes so teams understand how work flows.</p>
+      </div>
 
-<div class="card">
-<h3>Workflow Clarity</h3>
-<p>Map simple step-by-step processes so teams understand how work flows.</p>
-</div>
+      <div class="card">
+        <h3>System Structure</h3>
+        <p>Turn services or internal processes into organized digital systems.</p>
+      </div>
 
-<div class="card">
-<h3>System Structure</h3>
-<p>Turn services or internal processes into organized digital systems.</p>
-</div>
+      <div class="card">
+        <h3>Execution Support</h3>
+        <p>Help founders translate ideas into practical digital structures.</p>
+      </div>
 
-<div class="card">
-<h3>Execution Support</h3>
-<p>Help founders translate ideas into practical digital structures.</p>
-</div>
+      <div class="card">
+        <h3>Website Structure</h3>
+        <p>Organize website pages so visitors understand services and next steps.</p>
+      </div>
 
-<div class="card">
-<h3>Website Structure</h3>
-<p>Organize website pages so visitors understand services and next steps.</p>
-</div>
+      <div class="card">
+        <h3>Digital Organization</h3>
+        <p>Organize documents, tools, and digital information so teams work faster.</p>
+      </div>
 
-<div class="card">
-<h3>Digital Organization</h3>
-<p>Organize documents, tools, and digital information so teams work faster.</p>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 </section>
-
 
 <section id="tools">
+  <div class="container">
 
-<div class="container">
+    <h2>Tools & Capabilities</h2>
 
-<h2>Tools & Capabilities</h2>
+    <p class="section-intro">
+      The tools and digital structures I use to organize workflows and support operations.
+    </p>
 
-<p class="section-intro">
-The tools and digital structures I use to organize workflows and support operations.
-</p>
+    <div class="grid-3">
 
-<div class="grid-3">
+      <div class="card">
+        <h3>Digital System Blueprint</h3>
+        <p>Plan the structure of digital workflows before building them.</p>
+      </div>
 
-<div class="card">
-<h3>Digital System Blueprint</h3>
-<p>Plan the structure of digital workflows before building them.</p>
-</div>
+      <div class="card">
+        <h3>Google Sheets Systems</h3>
+        <p>Create structured sheets for tracking, workflows, and operations.</p>
+      </div>
 
-<div class="card">
-<h3>Google Sheets Systems</h3>
-<p>Create structured sheets for tracking, workflows, and operations.</p>
-</div>
+      <div class="card">
+        <h3>Google Apps Script</h3>
+        <p>Automate tasks and connect forms to internal systems.</p>
+      </div>
 
-<div class="card">
-<h3>Google Apps Script</h3>
-<p>Automate tasks and connect forms to internal systems.</p>
-</div>
+      <div class="card">
+        <h3>Python Workflow Tools</h3>
+        <p>Support automation experiments and system logic.</p>
+      </div>
 
-<div class="card">
-<h3>Python Workflow Tools</h3>
-<p>Support automation experiments and system logic.</p>
-</div>
+      <div class="card">
+        <h3>GitHub & Version Control</h3>
+        <p>Manage code and deploy portfolio projects.</p>
+      </div>
 
-<div class="card">
-<h3>GitHub & Version Control</h3>
-<p>Manage code and deploy portfolio projects.</p>
-</div>
+      <div class="card">
+        <h3>AI-Assisted Productivity</h3>
+        <p>Use AI tools to accelerate documentation and planning.</p>
+      </div>
 
-<div class="card">
-<h3>AI-Assisted Productivity</h3>
-<p>Use AI tools to accelerate documentation and planning.</p>
-</div>
+    </div>
 
-</div>
-
-</div>
+  </div>
 </section>
-
 
 <section id="contact">
+  <div class="container">
 
-<div class="container">
+    <h2>Contact</h2>
 
-<h2>Contact</h2>
+    <div class="card">
+      <p><strong>Name:</strong> Sherryl Veloso-Peñaflor</p>
 
-<div class="card">
+      <p>
+        <strong>Primary Email:</strong>
+        <a href="mailto:smallsteps@tinyteamstudio.online">smallsteps@tinyteamstudio.online</a>
+      </p>
 
-<p><strong>Name:</strong> Sherryl Veloso-Peñaflor</p>
+      <p>
+        <strong>Alternative Email:</strong>
+        <a href="mailto:chinveloso.consmaterials@gmail.com">chinveloso.consmaterials@gmail.com</a>
+      </p>
+    </div>
 
-<p>
-<strong>Primary Email:</strong>
-<a href="mailto:smallsteps@tinyteamstudio.online">
-smallsteps@tinyteamstudio.online
-</a>
-</p>
-
-<p>
-<strong>Alternative Email:</strong>
-<a href="mailto:chinveloso.consmaterials@gmail.com">
-chinveloso.consmaterials@gmail.com
-</a>
-</p>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
-
 <footer>
-
-© 2026 Sherryl Veloso-Peñaflor | AI Operations & Automation Portfolio
-
+  © 2026 Sherryl Veloso-Peñaflor | AI Operations & Automation Portfolio
 </footer>
 
 </body>
